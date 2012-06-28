@@ -20,9 +20,12 @@ Example usage in a controller:
 	
 		public function index()
 		{
+			// renders /views/test.blade.php or /modules/test/views/test.blade.php
+		
 			$this->blade->set('foo', 'bar')
-				->set_data('an_array', array(1, 2, 3, 4))
+				->set('an_array', array(1, 2, 3, 4))
 				->append('an_array', 5)
+				->set_data(array('more' => 'data', 'other' => 'data'))
 				->render('test', array('message' => 'Hello World!'));
 		}
 	
