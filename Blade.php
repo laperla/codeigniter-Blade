@@ -7,7 +7,8 @@
  * @author      Miguel Ayllón
  * @package     Blade
  * @category    Libraries
- * @version		1.0
+ * @version     1.0
+ * @url         https://github.com/laperla/CI_Blade 
  *
  */
 class Blade

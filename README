@@ -7,4 +7,25 @@ To install simply put the file into application/libraries and make sure that app
 
 By default template views must have .blade.php as extension. You can change this in $blade_ext class property.
 
+Example usage in a controller:
+
+	class Test extends MX_Controller
+	{
+
+		public function __construct()
+		{
+			parent::__construct();
+			$this->load->library('blade');
+		}	
+	
+		public function index()
+		{
+			$this->blade->set('foo', 'bar')
+				->set_data('an_array', array(1, 2, 3, 4))
+				->append('an_array', 5)
+				->render('test', array('message' => 'Hello World!'));
+		}
+	
+	}
+
 See the docs on http://laravel.com/docs/views/templating
