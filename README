@@ -1,0 +1,10 @@
+
+This class is a port of Laravel's blade templating system for CodeIgniter framework. 
+
+It's compatible with Modular Extensions - HMVC and it uses the file cache for store compiled templates.
+
+To install simply put the file into application/libraries and make sure that application/cache folder is writable.
+
+By default template views must have .blade.php as extension. You can change this in $blade_ext class property.
+
+See the docs on http://laravel.com/docs/views/templating
