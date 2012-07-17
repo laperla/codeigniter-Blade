@@ -247,11 +247,17 @@ class Blade
     {
         // Prepare template info
         $view_path = $this->_find_view($template);
-        $cache_id = 'blade-' . md5($template);
+        $cache_id = 'blade-' . md5($view_path);
 
         // Test if a compiled version exists in the cache
         if ($compiled = $this->cache->file->get($cache_id))
         {
+            // In production, avoid to test if the template was updated
+            if (ENVIRONMENT == 'production')
+            {
+                return $compiled;
+            }
+                    
             // Return cache version if the template was not updated
             $meta = $this->cache->file->get_metadata($cache_id);
             if ($meta['mtime'] > filemtime($view_path))
