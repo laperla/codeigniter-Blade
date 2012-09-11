@@ -2,13 +2,13 @@
 
 /**
  * This class is a port of Laravel's blade templating system.
- * See the docs on http://laravel.com/docs/views/templating
+ * See usage docs in Laravel framework site.
  *
  * @author      Miguel Ayllón
  * @package     Blade
  * @category    Libraries
- * @version     1.0.1
- * @url         https://github.com/laperla/CI_Blade 
+ * @version     1.0.2
+ * @url         https://github.com/laperla/codeigniter-Blade 
  *
  */
 class Blade
