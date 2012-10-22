@@ -374,7 +374,7 @@ class Blade
     {
         if (isset($this->_sections[$section]))
         {
-            $this->_sections[$section] = str_replace('@parent', $this->_sections[$section], $content);
+            $this->_sections[$section] = str_replace('@parent', $content, $this->_sections[$section]);
         }
         else
         {
