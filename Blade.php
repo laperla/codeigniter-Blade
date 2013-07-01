@@ -197,6 +197,12 @@ class Blade
 
         if ( ! $return)
         {
+            // Is minify requested?
+            if ($this->config->item('minify_output') === TRUE)
+            {
+                $content = $this->output->minify($content);
+            }
+            
             $this->output->append_output($content);
         }
 
